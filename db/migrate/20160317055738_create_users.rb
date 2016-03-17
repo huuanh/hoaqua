@@ -5,6 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email, null: false, default: ''
       t.string :password_digest, null: false, default: ''
       t.string :username, null: false, default: ''
+      t.boolean :visible, default: true
     end
     add_index :users, :email, unique: true
     add_index :users, :username, unique: true
