@@ -1,0 +1,19 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.header-nav {
+  text-align: right;
+  border-bottom: 1px solid red;
+}
+
+.product-info {
+  width: 30%;
+  border-bottom: 1px dotted black;
+  float: left;
+  margin: 1%;
+  img {
+    width: 80%;
+    margin: 1% 10%;
+  }
+}
