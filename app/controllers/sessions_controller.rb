@@ -4,11 +4,13 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by(email: params[:session][:email].downcase)
-    if user && user.authenticate(params[:session][:password])
+    if user && user.visible && user.authenticate(params[:session][:password])
       session[:user_id] = user.id
       redirect_to user
+    elsif !user.visible
+      flash[:danger] = "tai khoan da bi khoa"
+      render 'new'
     else
-      # Create an error message.
       render 'new'
     end
   end

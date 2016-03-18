@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
+
+  namespace :admin do
+    resources :users
+    resources :products
+    get 'admin' => 'application#index'
+  end
+
   get 'sessions/new'
 
   resources :users
-  resources :products
+  resources :products, only: [:show, :index]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

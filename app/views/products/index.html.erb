@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Products</h1>
+<h1>Listing HoaQua</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Price</th>
@@ -21,8 +21,6 @@
         <td><%= product.description %></td>
         <td><%= product.make %></td>
         <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+<%= will_paginate @products %>

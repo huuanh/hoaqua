@@ -1,0 +1,27 @@
+<div id="form-new">
+  <%= form_for([:admin,@product], remote: true) do |f| %>
+      <div class="field">
+        <%= f.label :price %><br>
+        <%= f.text_field :price %>
+      </div>
+      <div class="field">
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+      </div>
+      <div class="field">
+        <%= f.label :description %><br>
+        <%= f.text_field :description %>
+      </div>
+      <div class="field">
+        <%= f.label :make %><br>
+        <%= f.text_field :make %>
+      </div>
+      <div class="field">
+        <%= f.label :img_link %><br>
+        <%= f.text_field :img_link %>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+  <% end %>
+</div>
