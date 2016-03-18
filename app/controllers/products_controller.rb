@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
     if params[:query]
       @products = Product.where("name LIKE ?", "%#{params[:query]}%").paginate(:page => params[:page], :per_page => 30)
     else
-      @products = []
+      @products = Product.paginate(:page => params[:page], :per_page => 30)
     end
   end
 
