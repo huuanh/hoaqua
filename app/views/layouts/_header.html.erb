@@ -1,7 +1,7 @@
 
 <div class="header-nav">
   <div class="header-nav-left">
-    <%= link_to 'home', root_path %>
+    <%= link_to 'home', root_path, class: 'header-home my-button' %>
     <div class="search-bar">
       <%= form_tag products_path, method: :get, class: 'form-search' do %>
           <%= text_field_tag :query, params[:query], placeholder: 'Tìm kiếm', class: 'typeahead', autocomplete: 'off' %>
@@ -13,13 +13,15 @@
   </div>
   <div class="header-nav-right">
     <% if current_user %>
-        <%= link_to 'sign out', logout_path, :method => :delete %>
+        <%= link_to 'sign out', logout_path, :method => :delete, class: 'my-button' %>
         <% if admin? %>
-          <%= link_to 'admin', admin_admin_path %>
+          <%= link_to 'admin', admin_admin_path, class: 'my-button' %>
+        <% else %>
+          <%= link_to 'cart(' + current_user.my_cart.count.to_s + ')', bills_path, class: 'my-button' %>
         <% end %>
     <% else %>
-        <%= link_to 'sign up', new_user_path %> |
-        <%= link_to 'sign in', login_path %>
+        <%= link_to 'sign up', new_user_path, class: 'my-button' %> |
+        <%= link_to 'sign in', login_path, class: 'my-button' %>
     <% end %>
   </div>
 </div>

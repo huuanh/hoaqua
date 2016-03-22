@@ -3,6 +3,7 @@
   <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#users">users</a></li>
     <li><a data-toggle="tab" href="#products">products</a></li>
+    <li><a data-toggle="tab" href="#bills">bills</a></li>
   </ul>
 
   <div class="tab-content">
@@ -25,6 +26,7 @@
         </tbody>
       </table>
     </div>
+
     <div id="products" class="tab-pane fade">
       <h3>PRODUCTS</h3>
       <div class="create-product"><%= link_to 'add', new_admin_product_path, remote: true %></div>
@@ -43,6 +45,26 @@
             <%= render product %>
         <% end %>
         </tbody>
+      </table>
+    </div>
+
+    <div id="bills" class="tab-pane fade">
+      <h3>BILLS</h3>
+      <table class="table table-hover">
+        <thead>
+        <tr>
+          <th>user name</th>
+          <th>product</th>
+          <th>number</th>
+          <th>total($)</th>
+        </tr>
+        </thead>
+        <tbody>
+          <% all_bills.each do |bill| %>
+            <%= render bill %>
+          <% end %>
+        </tbody>
+
       </table>
     </div>
   </div>

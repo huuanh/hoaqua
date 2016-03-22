@@ -7,7 +7,7 @@
           <p>xuat su: <%= product.make %></p>
         </div>
         <div class="product-info-img">
-          <%= image_tag product.img_link %>
+          <%= link_to image_tag(product.img_link), product_path(product) %>
         </div>
       </div>
   <% end %>

@@ -38,6 +38,9 @@ gem 'bcrypt', '~> 3.1.7'
 #pagination
 gem 'will_paginate', '~> 3.0.6'
 
+#pundit
+gem 'pundit'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

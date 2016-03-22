@@ -1,0 +1,7 @@
+<tr id="bill-<%= bill.id %>">
+  <td><%= bill.user.name %></td>
+  <td><%= bill.product.name %></td>
+  <td><%= bill.number %></td>
+  <td><%= bill.money %></td>
+  <td><%= link_to 'del', admin_bill_path(bill), method: :delete, remote: true, data: { confirm: 'Are you sure?' } %></td>
+</tr>

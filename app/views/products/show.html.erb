@@ -1,23 +1,24 @@
-<p id="notice"><%= notice %></p>
+<div class="product-info">
+  <div class="product-info-text">
+    <p>ten: <%= @product.name %></p><br>
+    <p>mieu ta: <%= @product.description %></p><br>
+    <p>xuat su: <%= @product.make %></p>
+  </div>
+  <div class="product-info-img">
+    <%= image_tag @product.img_link %>
+  </div>
+</div>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Make:</strong>
-  <%= @product.make %>
-</p>
+<% if current_user %>
+    <%= form_for(Bill.new, :url => {controller: 'bills', action: 'create', user_id: current_user.id, product_id: @product.id}) do |f| %>
+        <div class="field">
+          <%= f.label :number %><br>
+          <%= f.number_field :number %>
+        </div>
+        <div class="actions">
+          <%= f.submit 'BUY' %>
+        </div>
+    <% end %>
+<% end %>
 
 <%= link_to 'Back', products_path %>

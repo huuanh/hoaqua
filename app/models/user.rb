@@ -1,5 +1,10 @@
 class User < ActiveRecord::Base
   has_secure_password
+
+  def my_cart
+    Bill.where(user: self)
+  end
+
   # def User.digest(string)
   #   cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
   #       BCrypt::Engine.cost

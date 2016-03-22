@@ -2,9 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//----------------------header-------------------
 .header-nav {
   width: 100%;
   display: inline-block;
+}
+
+.search-bar {
+  float: left;
+}
+
+.header-home {
+  float: left;
 }
 
 .header-nav-right {
@@ -30,4 +39,11 @@
     width: 80%;
     margin: 1% 10%;
   }
+}
+
+//----------------my button------------------
+.my-button {
+  padding: 5px 3px;
+  background-color: lightgray;
+  color: black;
 }
