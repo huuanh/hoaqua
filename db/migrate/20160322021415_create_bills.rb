@@ -3,6 +3,7 @@ class CreateBills < ActiveRecord::Migration
     create_table :bills do |t|
       t.references :user, index: true, foreign_key: true, null: false
       t.references :product, index: true, foreign_key: true, null: false
+      t.boolean :checked, default: false
       t.integer :number, default: 0
 
       t.timestamps null: false

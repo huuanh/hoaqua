@@ -3,5 +3,6 @@
   <td><%= bill.product.name %></td>
   <td><%= bill.number %></td>
   <td><%= bill.money %></td>
+  <td><%= link_to "<i class='fa fa-check'></i>".html_safe, [:checked, :admin, bill], method: :patch, remote: true, class: 'checked-' + bill.checked.to_s %></td>
   <td><%= link_to 'del', admin_bill_path(bill), method: :delete, remote: true, data: { confirm: 'Are you sure?' } %></td>
 </tr>

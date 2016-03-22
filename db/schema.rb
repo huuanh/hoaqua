@@ -17,11 +17,12 @@ ActiveRecord::Schema.define(version: 20160322021415) do
   enable_extension "plpgsql"
 
   create_table "bills", force: :cascade do |t|
-    t.integer  "user_id",    null: false
-    t.integer  "product_id", null: false
-    t.integer  "number"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "user_id",                    null: false
+    t.integer  "product_id",                 null: false
+    t.boolean  "checked",    default: false
+    t.integer  "number",     default: 0
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   add_index "bills", ["product_id"], name: "index_bills_on_product_id", using: :btree

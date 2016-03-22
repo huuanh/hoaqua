@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users
     resources :products
-    resources :bills, only: [:destroy]
+    resources :bills, only: [:destroy] do
+      member do
+        patch :checked
+      end
+    end
     get 'admin' => 'application#index'
   end
 
