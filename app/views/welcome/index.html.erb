@@ -1,15 +1,6 @@
 <div class="list-products">
   <% @products.each do |product| %>
-      <div class="product-info">
-        <div class="product-info-text">
-          <p>ten: <%= product.name %></p><br>
-          <p>mieu ta: <%= product.description %></p><br>
-          <p>xuat su: <%= product.make %></p>
-        </div>
-        <div class="product-info-img">
-          <%= link_to image_tag(product.img_link), product_path(product) %>
-        </div>
-      </div>
+      <%= render product %>
   <% end %>
 </div>
 <%= will_paginate @products %>

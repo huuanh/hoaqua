@@ -1,31 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing HoaQua</h1>
+<div class="row list-products-index">
+  <% @products.each do |product| %>
+      <%= render product %>
+  <% end %>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Price</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Make</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.price %></td>
-        <td><%= product.name %></td>
-        <td><%= product.description %></td>
-        <td><%= product.make %></td>
-        <td><%= link_to 'Show', product %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= will_paginate @products %>
+  <%= will_paginate @products %>
+</div>

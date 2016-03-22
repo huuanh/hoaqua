@@ -6,54 +6,107 @@
 .header-nav {
   width: 100%;
   display: inline-block;
-}
-
-.search-bar {
-  float: left;
-}
-
-.header-home {
-  float: left;
-  margin-right: 10px;
+  background-color: lightblue;
+  margin-bottom: 10px;
+  .form-search {
+    //width: 70%;
+    height: 100%;
+  }
+  .header-home {
+    float: left;
+    margin-right: 10px;
+    width: 10%;
+    .fa {
+      width: 20%;
+      padding: 0 40%;
+    }
+    :hover{
+      color: inherit;
+    }
+  }
+  .search-bar {
+    float: left;
+    height: 30px;
+    width: 80%;
+    display: inline-block;
+    input {
+      height: 30px;
+      width: 80%;
+    }
+    .search-submit {
+      width: 18%;
+    }
+  }
 }
 
 .header-nav-right {
   text-align: right;
   float: right;
+  width: 29%;
+  height: 30px;
 }
 
 .header-nav-left {
   text-align: left;
   float: left;
-}
-
-.list-products {
-  display: inline-block;
-}
-
-.product-info {
-  width: 30%;
-  border-bottom: 1px dotted black;
-  float: left;
-  margin: 1%;
-  img {
-    width: 80%;
-    margin: 1% 10%;
-  }
+  width: 69%;
+  height: 30px;
 }
 
 //----------------my button------------------
 .my-button {
-  padding: 5px 3px;
+  padding: 6px 6px;
   background-color: lightgray;
   color: black;
+  height: 30px;
+  font-size: 17px;
 }
 
-//checked
+//------------checked------------------------
 .checked-false{
   color: red;
 }
 
 .checked-true{
   color: green;
+}
+
+//---------------list of products-----------
+
+.list-products {
+  display: inline-block;
+}
+
+.product-info {
+  margin-bottom: 50px;
+  float: left;
+  border: 2px solid white;
+  box-sizing: inherit;
+  img {
+    width: 100%;
+    padding: 0 1%;
+  }
+}
+
+.product-info:hover {
+  border: 2px solid lightblue;
+}
+
+.product-info-text {
+  p {
+    margin: 0;
+  }
+  .product-name {
+    font-size: 130%;
+    color: #2E2F30;
+  }
+  .product-price {
+    color: darkred;
+    font-size: 120%;
+  }
+}
+
+//----------------paginate-----------
+.pagination {
+  display: inline-block;
 }

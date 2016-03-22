@@ -3,9 +3,9 @@ class ProductsController < ApplicationController
 
   def index
     if params[:query]
-      @products = Product.where("name LIKE ?", "%#{params[:query]}%").paginate(:page => params[:page], :per_page => 30)
+      @products = Product.where("name LIKE ?", "%#{params[:query]}%").paginate(:page => params[:page], :per_page => 9)
     else
-      @products = Product.paginate(:page => params[:page], :per_page => 30)
+      @products = Product.paginate(:page => params[:page], :per_page => 9)
     end
   end
 

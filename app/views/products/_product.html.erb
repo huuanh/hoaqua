@@ -1,0 +1,11 @@
+<div class="col-md-4 product-info">
+  <div class="product-info-img">
+    <%= link_to image_tag(product.img_link), product_path(product) %>
+  </div>
+  <div class="product-info-text">
+    <p class="product-i product-name"><%= product.name %></p>
+    <p class="product-i product-make">xuat su: <%= product.make %></p>
+    <p class="product-i product-price">gia: <%= product.price %></p>
+    <p class="product-i product-description">mieu ta: <%= product.description %></p>
+  </div>
+</div>
