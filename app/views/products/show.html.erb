@@ -1,10 +1,11 @@
-<div class="product-info">
-  <div class="product-info-text">
-    <p>ten: <%= @product.name %></p><br>
-    <p>mieu ta: <%= @product.description %></p><br>
-    <p>xuat su: <%= @product.make %></p>
+<div class="col-md-6 product-show-info">
+  <div class="product-show-info-text">
+    <p class="product-name"><%= @product.name %></p>
+    <p>Miêu tả: <%= @product.description %></p>
+    <p class="product-price">Giá: <%= @product.price %></p>
+    <p>Xuất sứ: <%= @product.make %></p>
   </div>
-  <div class="product-info-img">
+  <div class="product-show-info-img">
     <%= image_tag @product.img_link %>
   </div>
 </div>
@@ -16,9 +17,7 @@
           <%= f.number_field :number %>
         </div>
         <div class="actions">
-          <%= f.submit 'BUY' %>
+          <%= f.submit 'BUY', class: 'my-button' %>
         </div>
     <% end %>
 <% end %>
-
-<%= link_to 'Back', products_path %>

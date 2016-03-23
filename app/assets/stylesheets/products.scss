@@ -5,3 +5,18 @@
 .list-products-index {
   display: inline-block;
 }
+
+//------------product show------------------
+.product-show-info {
+  img {
+    width: 100%;
+  }
+  .product-price {
+    color: darkred;
+    font-size: 120%;
+  }
+  .product-name {
+    font-size: 170%;
+    color: #2E2F30;
+  }
+}

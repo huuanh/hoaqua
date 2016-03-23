@@ -5,7 +5,7 @@
       <%= form_tag products_path, method: :get, class: 'form-search' do %>
           <%= text_field_tag :query, params[:query], placeholder: 'Tìm kiếm', class: 'typeahead', autocomplete: 'off' %>
           <button type="submit" class="search-submit">
-            <i class="fa fa-search">search</i>
+            <i class="fa fa-search"></i>
           </button>
       <% end %>
     </div>

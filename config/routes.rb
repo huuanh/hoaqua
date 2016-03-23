@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :users
-    resources :products
+    resources :products, only: [:new, :edit, :create, :update, :destroy]
     resources :bills, only: [:destroy] do
       member do
         patch :checked

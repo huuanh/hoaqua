@@ -7,14 +7,15 @@
   width: 100%;
   display: inline-block;
   background-color: lightblue;
-  margin-bottom: 10px;
+  margin: 0 0 30px 0;
+  box-sizing: border-box;
   .form-search {
     //width: 70%;
     height: 100%;
   }
   .header-home {
     float: left;
-    margin-right: 10px;
+    margin-right: 0;
     width: 10%;
     .fa {
       width: 20%;
@@ -27,36 +28,37 @@
   .search-bar {
     float: left;
     height: 30px;
-    width: 80%;
+    width: 90%;
     display: inline-block;
     input {
       height: 30px;
       width: 80%;
     }
     .search-submit {
-      width: 18%;
+      width: 8%;
+      background-color: #5898d3;
     }
   }
-}
 
-.header-nav-right {
-  text-align: right;
-  float: right;
-  width: 29%;
-  height: 30px;
-}
+  .header-nav-right {
+    text-align: right;
+    float: right;
+    width: 29%;
+    height: 30px;
+  }
 
-.header-nav-left {
-  text-align: left;
-  float: left;
-  width: 69%;
-  height: 30px;
+  .header-nav-left {
+    text-align: left;
+    float: left;
+    width: 69%;
+    height: 30px;
+  }
 }
 
 //----------------my button------------------
 .my-button {
   padding: 6px 6px;
-  background-color: lightgray;
+  background-color: #5898d3;
   color: black;
   height: 30px;
   font-size: 17px;

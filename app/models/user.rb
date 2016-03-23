@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
   has_secure_password
 
+  validates :username, presence: true
+  validates :email, presence: true
+
   def my_cart
     Bill.where(user: self)
   end
