@@ -41,6 +41,8 @@ gem 'will_paginate', '~> 3.0.6'
 #pundit
 gem 'pundit'
 
+gem 'devise', '~> 3.5', '>= 3.5.6'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -56,6 +58,9 @@ group :development, :test do
 
   #rspec
   gem 'rspec-rails', '~> 3.0'
+
+  gem 'factory_girl'
+
 end
 
 group :development do

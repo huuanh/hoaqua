@@ -10,7 +10,7 @@ class Admin::ApplicationController < ApplicationController
     @products = Product.all
   end
   def admin?
-    current_user && (current_user.id == 1)
+    current_user && current_user.admin
   end
 
   def current_user

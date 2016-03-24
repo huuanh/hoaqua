@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'rspec/rails'
 
 RSpec.describe ProductsController, type: :controller do
   describe "GET #index" do
