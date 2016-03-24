@@ -1,0 +1,13 @@
+<div id="like-product-<%= product.id %>">
+  <% if current_user %>
+      <% if current_user.liked_product(product).empty? %>
+          <%= link_to ('<i class="fa fa-heart-o">(' + product.total_like.to_s + ')</i>').html_safe, liked_product_path(product), method: :patch, remote: true %>
+      <% else %>
+          <%= link_to ('<i class="fa fa-heart">(' + product.total_like.to_s + ')</i>').html_safe, liked_product_path(product), method: :patch, remote: true %>
+      <% end %>
+  <% end %>
+</div>
+
+<div class="fb-share-button"
+     data-href="<%= product_url(product) %>"
+     data-layout="button_count"></div>

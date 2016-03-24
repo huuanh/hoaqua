@@ -8,6 +8,10 @@ class User < ActiveRecord::Base
     Bill.where(user: self)
   end
 
+  def liked_product(product)
+    Liked.where(user: self, product: product)
+  end
+
   # def User.digest(string)
   #   cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
   #       BCrypt::Engine.cost

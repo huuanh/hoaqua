@@ -1,6 +1,7 @@
 <div class="col-md-4 product-info">
   <div class="product-info-img">
     <%= link_to image_tag(product.img_link), product_path(product) %>
+    <%= render 'products/liked', product: product %>
   </div>
   <div class="product-info-text">
     <p class="product-i product-name"><%= product.name %></p>

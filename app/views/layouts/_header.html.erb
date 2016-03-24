@@ -1,26 +1,31 @@
 <div class="header-nav">
-  <div class="header-nav-left">
-    <%= link_to '<i class="fa fa-home"></i>'.html_safe, root_path, class: 'header-home my-button' %>
-    <div class="search-bar">
-      <%= form_tag products_path, method: :get, class: 'form-search' do %>
-          <%= text_field_tag :query, params[:query], placeholder: 'Tìm kiếm', class: 'typeahead', autocomplete: 'off' %>
-          <button type="submit" class="search-submit">
-            <i class="fa fa-search"></i>
-          </button>
-      <% end %>
-    </div>
-  </div>
-  <div class="header-nav-right">
-    <% if current_user %>
-        <%= link_to 'sign out', logout_path, :method => :delete, class: 'my-button' %>
-        <% if admin? %>
-          <%= link_to 'admin', admin_admin_path, class: 'my-button' %>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <%= link_to '<i class="fa fa-home"> HoaQua</i>'.html_safe, root_path, class: 'navbar-brand active' %>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"></li>
+        <li><%= form_tag products_path, method: :get, class: 'form-inline pull-xs-right' do %>
+              <%= text_field_tag :query, params[:query], placeholder: 'Tìm kiếm', class: 'form-control', autocomplete: 'off' %>
+              <button type="submit" class="btn btn-success-outline">
+                <i class="fa fa-search"></i>
+              </button>
+          <% end %></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <% if current_user %>
+            <li><%= link_to '<i class="fa fa-sign-out"> sign out</i>'.html_safe, logout_path, :method => :delete %></li>
+            <% if admin? %>
+                <li><%= link_to 'admin', admin_admin_path, class: 'btn btn-warning' %></li>
+            <% else %>
+                <li><%= link_to '<i class="fa fa-shopping-cart"></i>('.html_safe + current_user.my_cart.count.to_s + ')', bills_path %></li>
+            <% end %>
         <% else %>
-          <%= link_to '<i class="fa fa-shopping-cart"></i>('.html_safe + current_user.my_cart.count.to_s + ')', bills_path, class: 'my-button' %>
+            <li><%= link_to '<i class="fa fa-user-plus"> sign up</i>'.html_safe, new_user_path %></li> |
+            <li><%= link_to '<i class="fa fa-sign-in"> sign in</i>'.html_safe, login_path %></li>
         <% end %>
-    <% else %>
-        <%= link_to 'sign up', new_user_path, class: 'my-button' %> |
-        <%= link_to 'sign in', login_path, class: 'my-button' %>
-    <% end %>
-  </div>
+      </ul>
+    </div>
+  </nav>
 </div>

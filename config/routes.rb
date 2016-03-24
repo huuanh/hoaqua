@@ -14,7 +14,11 @@ Rails.application.routes.draw do
   get 'sessions/new'
 
   resources :users, only: [:show, :new, :create, :edit, :update]
-  resources :products, only: [:show, :index]
+  resources :products, only: [:show, :index] do
+    member do
+      patch :liked
+    end
+  end
   resources :bills, only: [:index, :create, :edit, :update, :show]
 
   # The priority is based upon order of creation: first created -> highest priority.

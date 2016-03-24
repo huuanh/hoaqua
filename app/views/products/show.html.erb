@@ -1,6 +1,6 @@
 <div class="col-md-6 product-show-info">
   <div class="product-show-info-text">
-    <p class="product-name"><%= @product.name %></p>
+    <p class="product-name"><%= @product.name %><%= render 'products/liked', product: @product %></p>
     <p>Miêu tả: <%= @product.description %></p>
     <p class="product-price">Giá: <%= @product.price %></p>
     <p>Xuất sứ: <%= @product.make %></p>
@@ -17,7 +17,14 @@
           <%= f.number_field :number %>
         </div>
         <div class="actions">
-          <%= f.submit 'BUY', class: 'my-button' %>
+          <%= f.submit 'BUY', class: 'btn btn-success' %>
         </div>
     <% end %>
 <% end %>
+
+
+<div class="fb-cmt">
+  <div class="fb-comments"
+       data-href="<%= product_url(@product) %>"
+       data-numposts="5"></div>
+</div>
