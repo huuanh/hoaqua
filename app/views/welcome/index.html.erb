@@ -1,6 +1,46 @@
+<div class="row list-or-grid-view">
+  <i id="list-layout" class="fa fa-bars"></i>
+  <i id="grid-layout" class="fa fa-th"></i>
+</div>
 <div class="list-products">
   <% @products.each do |product| %>
-      <%= render product %>
+      <% if @mode == 'list' %>
+        <%= render 'products/product_list', product: product %>
+      <% else %>
+        <%= render product %>
+      <% end %>
   <% end %>
 </div>
 <%= will_paginate @products %>
+
+<script>
+  $(document).on("click","#list-layout", function(e){
+        return $.ajax("<%= root_url %>",{
+            type:"GET",
+            dataType:"script",
+            data:{value:'list'},
+            error:function(e,o,t){
+              return console.log("AJAX Error: "+o)
+            },
+            success:function(e,o,t){
+              return console.log("Dynamic OK!")
+            }
+            })
+      });
+</script>
+
+<script>
+  $(document).on("click","#grid-layout", function(f){
+    return $.ajax("<%= root_url %>",{
+      type:"GET",
+      dataType:"script",
+      data:{value:'grid'},
+      error:function(e,o,t){
+        return console.log("AJAX Error: "+o)
+      },
+      success:function(f,o,t){
+        return console.log("Dynamic OK!")
+      }
+    })
+  });
+</script>

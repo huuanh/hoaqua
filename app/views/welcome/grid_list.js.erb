@@ -1,0 +1,4 @@
+$(".list-products").html("");
+<% @products.each do |product| %>
+$(".list-products").append("<%= j (render product) %>");
+<% end %>

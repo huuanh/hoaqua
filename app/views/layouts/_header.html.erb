@@ -7,7 +7,7 @@
       <ul class="nav navbar-nav">
         <li class="active"></li>
         <li><%= form_tag products_path, method: :get, class: 'form-inline pull-xs-right' do %>
-              <%= text_field_tag :query, params[:query], placeholder: 'Tìm kiếm', class: 'form-control', autocomplete: 'off' %>
+              <%= text_field_tag :query, params[:query], placeholder: 'Tìm kiếm', class: 'form-control' %>
               <button type="submit" class="btn btn-success-outline">
                 <i class="fa fa-search"></i>
               </button>

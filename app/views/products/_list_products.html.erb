@@ -1,0 +1,7 @@
+<% products.each do |product| %>
+    <% if @mode == 'list' %>
+        <%= render 'products/product_list', product: product %>
+    <% else %>
+        <%= render product %>
+    <% end %>
+<% end %>
