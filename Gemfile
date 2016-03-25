@@ -43,6 +43,11 @@ gem 'pundit'
 
 gem 'devise', '~> 3.5', '>= 3.5.6'
 
+#authen with social network
+gem 'omniauth', '~> 1.3', '>= 1.3.1'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
