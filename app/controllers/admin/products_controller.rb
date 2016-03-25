@@ -11,12 +11,11 @@ class Admin::ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-
     respond_to do |format|
       if @product.save
         format.js
       else
-        format.js { render inline: "alert('khong thanh cong');"  }
+        format.js { render inline: 'alert("' + @product.errors.full_messages.to_sentence + '");'  }
       end
     end
   end

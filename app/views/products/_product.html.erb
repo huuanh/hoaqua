@@ -1,6 +1,6 @@
 <div class="col-md-4 product-info">
   <div class="product-info-img">
-    <%= link_to image_tag(product.img_link), product_path(product), data: { no_turbolink: true } %>
+    <%= link_to image_tag(product.img_link.thumb.url), product_path(product), data: { no_turbolink: true } %>
     <%= render 'products/liked', product: product %>
   </div>
   <div class="product-info-text">

@@ -47,6 +47,11 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.2)
     byebug (8.2.2)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.1.x)
@@ -100,6 +105,7 @@ GEM
     mime-types (3.0)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0221)
+    mini_magick (4.5.0)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     multi_json (1.11.2)
@@ -162,6 +168,7 @@ GEM
     rake (11.1.1)
     rdoc (4.2.2)
       json (~> 1.4)
+    remotipart (1.2.1)
     responders (2.1.2)
       railties (>= 4.2.0, < 5.1)
     rspec-core (3.4.4)
@@ -228,18 +235,21 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootstrap-sass (~> 3.3, >= 3.3.6)
   byebug
+  carrierwave (~> 0.10.0)
   coffee-rails (~> 4.1.0)
   devise (~> 3.5, >= 3.5.6)
   factory_girl
   font-awesome-rails (~> 4.5, >= 4.5.0.1)
   jbuilder (~> 2.0)
   jquery-rails
+  mini_magick (~> 4.3)
   omniauth (~> 1.3, >= 1.3.1)
   omniauth-facebook
   omniauth-twitter
   pg
   pundit
   rails (= 4.2.4)
+  remotipart (~> 1.2)
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
