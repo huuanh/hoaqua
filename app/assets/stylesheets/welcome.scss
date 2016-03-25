@@ -9,8 +9,9 @@
 }
 
 .list-or-grid-view {
-  float: right;
   margin-right: 20px;
+  width: 100%;
+  text-align: right;
 }
 
 //----------------------header-------------------
@@ -41,7 +42,7 @@
 //---------------list of products-----------
 
 .list-products {
-  display: inline-block;
+
 }
 
 .product-info {

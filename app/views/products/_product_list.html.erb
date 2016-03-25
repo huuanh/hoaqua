@@ -1,5 +1,8 @@
 <div class="row">
-  <div class="product-info-text">
+  <div class="col-md-6">
+    <%= link_to image_tag(product.img_link.thumb.url), product_path(product)  %>
+  </div>
+  <div class="product-info-text col-md-6">
     <div class="product-i product-name"><%= product.name %>
     <%= render 'products/liked', product: product %>
     </div>
@@ -7,5 +10,5 @@
     <div class="product-i product-price">gia: <%= product.price %></div>
     <div class="product-i product-description">mieu ta: <%= product.description %></div>
   </div>
-  <hr>
 </div>
+<hr>

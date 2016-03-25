@@ -49,6 +49,7 @@ gem 'devise', '~> 3.5', '>= 3.5.6'
 gem 'omniauth', '~> 1.3', '>= 1.3.1'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
+gem 'omniauth-google-oauth2'
 
 # upload img
 gem 'carrierwave', '~> 0.10.0'
